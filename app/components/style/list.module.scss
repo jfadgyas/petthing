@@ -1,0 +1,11 @@
+.list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: 1em;
+}
+
+@media screen and (width <= 375px) {
+    .list{
+        padding-left: 0;
+    }
+}

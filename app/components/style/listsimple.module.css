@@ -1,0 +1,21 @@
+.list {
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 1em;
+  transform: translateY(25%);
+}
+
+@media screen and (width <= 375px) {
+  .list {
+    padding: 0;
+  }
+}/*# sourceMappingURL=listsimple.module.css.map */

@@ -1,0 +1,24 @@
+.listItem {
+  width: -moz-min-content;
+  width: min-content;
+  padding-right: 0.5em;
+  display: grid;
+  grid-template-columns: minmax(170px, 30vw) min-content;
+  grid-template-rows: min-content 1fr;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+  grid-template-areas: "title pic" "desc pic";
+}
+.listItem h3 {
+  grid-area: title;
+}
+.listItem p {
+  grid-area: desc;
+  margin: 0;
+  margin-bottom: 1em;
+  text-wrap: balance;
+}
+.listItem img {
+  grid-area: pic;
+  align-self: center;
+}/*# sourceMappingURL=listwithimages.module.css.map */

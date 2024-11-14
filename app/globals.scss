@@ -1,0 +1,41 @@
+@use './common' as *;
+
+// Content
+// @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: $bg-color;
+    line-height: 1.5;
+    font-family: var(--font-outfit);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    &:nth-child(even){
+        background: $primary-color;
+    }
+}
+
+h1,
+h2,
+h3{
+    font-family: var(--font-saira);
+    font-weight: 500;
+    font-style: normal;
+    text-wrap: balance;
+}
+
+h1{
+    font-weight: 700;
+}
+
+p{
+    color: $text-color;
+    font-weight: 300;
+}
+

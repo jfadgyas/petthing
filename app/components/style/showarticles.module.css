@@ -1,0 +1,66 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 325px);
+  gap: 1em;
+  color: #2f3843;
+  font-weight: 300;
+}
+
+.listItem {
+  background: #cde3f0;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 4px 4px 10px #2f3843;
+}
+
+.link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.imgwrapper {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.imgwrapper::after {
+  content: "";
+  position: absolute;
+  top: -150px;
+  right: 55%;
+  width: 550px;
+  aspect-ratio: 1;
+  background: #ee6762;
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
+.img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.articleTitle {
+  padding-inline: 2rem;
+  font-family: var(--font-saira);
+  font-size: 1.5em;
+}
+.articleTitle[data-animal=cat] {
+  color: #ee6762;
+}
+.articleTitle[data-animal=dog] {
+  color: cyan;
+}
+.articleTitle[data-animal=bird] {
+  color: limegreen;
+}
+
+.articleSummary {
+  padding-inline: 2rem;
+  font-size: 1.25em;
+}/*# sourceMappingURL=showarticles.module.css.map */

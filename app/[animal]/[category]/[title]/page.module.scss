@@ -1,0 +1,75 @@
+@use '../../../common' as *;
+
+.breadcums{
+    display: flex;
+    gap: 2em;
+    margin-inline: 2em;
+    padding: 0.2em;
+    transform: translateY(-0.5em);
+    background: $secondary-color;
+    color: $link-color;
+    border-radius: 0.3em;
+    font-family: var(--font-saira);
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: normal;
+    & > .breadcumlinktext{
+        color: $text-color;
+        cursor: default;
+    }
+}
+.breadcumlink{
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    &:after{
+        content: '>';
+        position: absolute;
+        top: 0;
+        right: -1.25em;
+        width: 1ch;
+        height: auto;
+    }    
+}
+.breadcumlinktext{
+    text-transform: uppercase;  
+}
+.linkwrapper{
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    padding: 3em 2em;
+    background: $primary-color;
+    color: $link-color;
+}
+.link{
+    padding-right: 0.5em;
+    color: inherit;
+    font-weight: 500;    
+    text-decoration: none;
+    text-transform: uppercase;
+    &:not(:last-child){
+        border-right: 1px solid;
+    }
+}
+.articlewrapper{
+    color: $text-color;
+    font-weight: 300; //vagy 400?
+    & section{
+        padding-inline: 2em;
+    }
+}
+.subtitle{
+    font-family: var(--font-saira);
+    font-weight: 500;
+    font-style: normal;
+    &--cat{
+        color: $cat-color;//#ee6762;
+    }
+    &--dog{
+        color: $dog-color;
+    }
+    &--bird{
+        color: $bird-color;
+    }
+}

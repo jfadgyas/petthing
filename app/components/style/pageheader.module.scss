@@ -1,0 +1,61 @@
+@use '../../common' as *;
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    &::after{
+        content: '';
+        position: absolute;
+        top: calc(150px - 180%);
+        right: 50%;
+        width: 100%;
+        aspect-ratio: 1;        
+        border-radius: 50%;
+        opacity: 0.75;
+    }
+    &--cat::after{
+        background: $cat-color;
+    }
+    &--dog::after{
+        background: $dog-color;
+    }
+    &--bird::after{
+        background: $bird-color;
+    }
+}
+.imgwrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    // aspect-ratio: 2.5/1;
+}
+.img{
+    object-fit: cover;
+    // object-fit: contain;
+}
+.title{
+    position: absolute;
+    top: 0;
+    left: 1em;
+    display: flex;
+    place-items: center;
+    max-width: 50%; // max-width: calc(100% - 4em);
+    height: 100%;
+    margin: 0;
+    color: $primary-color;
+    font-family: var(--font-saira);
+    font-weight: 700;
+    font-style: normal;
+    text-transform: capitalize;
+    text-wrap: balance;
+    z-index: 10;
+}
+
+@media screen and (width > 1000px) {
+    .header{
+        height: 300px;
+    }
+}

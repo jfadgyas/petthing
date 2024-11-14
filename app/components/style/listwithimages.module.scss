@@ -1,0 +1,27 @@
+@use '../../common' as *;
+
+.listItem{
+    width: min-content;
+    padding-right: 0.5em;
+    display: grid;
+    grid-template-columns: minmax(170px, 30vw) min-content;
+    grid-template-rows: min-content 1fr;
+    column-gap: 1em;    
+    grid-template-areas: 
+    'title pic'
+    'desc pic';
+    // box-shadow: 4px 4px 4px rgba($text-color, 0.5); //?    
+    & h3{
+        grid-area: title;
+    }
+    & p{
+        grid-area: desc;
+        margin: 0;
+        margin-bottom: 1em;
+        text-wrap: balance;
+    }
+    & img{
+        grid-area: pic;
+        align-self: center;
+    }
+}

@@ -1,0 +1,77 @@
+@use './common' as *;
+
+.article{
+    &:not(:first-child){
+        margin-block: 4em;
+        padding-inline: 2em;
+    }
+    &:first-child{ // hero
+        min-height: 60svh;
+    }
+}
+.imgwrapper{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.5/1;
+}
+.img{
+    object-fit: cover;
+}
+.details{
+    position: absolute;
+    top: 0;
+    right: 0;
+    // width: 55%;
+    width: clamp(200px, 33vw, 37em);
+    padding-inline: 2em;
+    background: rgba($secondary-color, 0.75);
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    text-align: right;
+    z-index: 100;
+    & .link{
+        position: relative;
+        // left: calc(-100% + 2em); // igy se rossz
+        left: calc(-100% + 6em);
+    }
+}
+.title,
+.subtitle{
+    margin: 0;
+    color: $link-color;
+}
+.title{
+    font-size: clamp(2em, 6.6vw, 18em);
+    font-weight: 900;
+}
+.motto{
+    text-align: justify;
+}
+.sectionTitle{
+    color: $cat-color;
+}
+.link{
+    padding: 0.5em;
+    background: $link-color;
+    color: $primary-color;
+    border-radius: 0.25em;
+    box-shadow: 2px 2px 10px $text-color;
+    font-family: var(--font-saira);
+    text-decoration: none;
+    text-transform: uppercase;
+    &[data-animal=cat]{
+        background: $cat-color;
+    }
+    &[data-animal=dog]{
+        background: $dog-color;
+    }
+    &[data-animal=bird]{
+        background: $bird-color;
+    }
+}
+
+@media screen and (width > 375px) {
+    .imgwrapper{
+        max-height: 80dvh;
+    }
+}

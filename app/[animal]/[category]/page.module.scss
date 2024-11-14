@@ -1,0 +1,10 @@
+@use '../../common' as *;
+
+.article{
+    margin-block: 4em;
+    padding-inline: 2em;
+}
+.sectionTitle{
+    color: $cat-color;
+    text-transform: capitalize;
+}
