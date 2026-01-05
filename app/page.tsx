@@ -59,7 +59,7 @@ const HomePage = () => {
                     >more about dogs
                 </Link>
             </article>
-            <article className={style.article} id='bird'>
+            {/* <article className={style.article} id='bird'>
                 <h2 className={style.sectionTitle}>Learn more about your bird's health</h2>
                 <ShowArticles animal='bird' />
                 <Link
@@ -68,7 +68,7 @@ const HomePage = () => {
                     href='bird'
                     >more about birds
                 </Link>
-            </article>
+            </article> */}
         </main>
     )
 }
