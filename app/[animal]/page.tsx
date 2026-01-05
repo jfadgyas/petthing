@@ -48,12 +48,12 @@ const AnimalPage = async ({params}: Record<string, any>) => {
                 </Link>
             </article>
 
-            <article className={style.article}>
+            {/* <article className={style.article}>
                 <h2 className={style.sectionTitle}>social media</h2>
                 <h3>egy mondat</h3>
                 <span>ide jon a scrollos tartalom</span>
                 <Link href='readmore'>read more</Link>
-            </article>
+            </article> */}
         </main>
 
     )
