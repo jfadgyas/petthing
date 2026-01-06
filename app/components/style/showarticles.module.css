@@ -49,12 +49,13 @@
   padding-inline: 2rem;
   font-family: var(--font-saira);
   font-size: 1.5em;
+  text-wrap: stable;
 }
 .articleTitle[data-animal=cat] {
   color: #ee6762;
 }
 .articleTitle[data-animal=dog] {
-  color: cyan;
+  color: rgb(66, 140, 184);
 }
 .articleTitle[data-animal=bird] {
   color: limegreen;

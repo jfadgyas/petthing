@@ -21,7 +21,7 @@
   background: #ee6762;
 }
 .link[data-animal=dog] {
-  background: cyan;
+  background: rgb(66, 140, 184);
 }
 .link[data-animal=bird] {
   background: limegreen;

@@ -18,7 +18,7 @@
   background: #ee6762;
 }
 .header--dog::after {
-  background: cyan;
+  background: rgb(66, 140, 184);
 }
 .header--bird::after {
   background: limegreen;
