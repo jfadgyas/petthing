@@ -5,7 +5,6 @@ import ShowArticles from "./components/ShowArticles"
 import ShowImage from "./components/ShowImage"
 
 import style from './page.module.scss'
-import { getAllPosts, getPost, postArticle } from "./lib/dal"
 
 const HomePage = async () => {
 
