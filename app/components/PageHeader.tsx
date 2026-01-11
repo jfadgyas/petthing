@@ -1,4 +1,8 @@
-import Image from 'next/image'
+'use client'
+
+import {CldImage} from 'next-cloudinary'
+
+// import Image from 'next/image'
 
 import style from './style/pageheader.module.scss'
 
@@ -14,12 +18,13 @@ const PageHeader = (props: Props) => {
             className={`${style['header']} ${style[`header--${props.animal}`]}`}
             >
             <div className={style.imgwrapper}>
-                <Image
+                <CldImage
                     className={style.img}
                     src={props.img}
                     alt='background'
                     fill
-                    priority
+                    // priority
+                    // preload???
                     sizes="100vw"
                 />
             </div>

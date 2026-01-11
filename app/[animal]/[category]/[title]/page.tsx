@@ -1,9 +1,8 @@
-import fs from 'fs'
-import path from 'path'
-
 import Link from "next/link"
 
-import Image from 'next/image'
+import { getPost } from "@/app/lib/dal"
+
+import ShowImage from '@/app/components/ShowImage'
 
 import { compileMDX } from "next-mdx-remote/rsc"
 
@@ -17,14 +16,13 @@ import style from './page.module.scss'
 
 const PostPage = async ({params}: Record<string, any>) => {
 
-    const {animal, title} = await params
+    const {animal, category, title} = await params
 
-    // Read article file and compile content
-    const fullPath = path.join(process.cwd(), `posts/${animal}`, `${title}.mdx`)
-    const fileContent = fs.readFileSync(fullPath, "utf-8")
+    // Get article and compile content
+    const post = await getPost(`${animal}/${category}/${title}`)
 
     const article = await compileMDX<Record<string, any>>({
-        source: fileContent,
+        source: post.content,
         options: {
             parseFrontmatter: true
         },
@@ -33,7 +31,7 @@ const PostPage = async ({params}: Record<string, any>) => {
             h2: (props) => <h2 className={`${style['subtitle']} ${style[`subtitle--${animal}`]}`} id={props.children?.toString()} {...props}>{props.children}</h2>,
             h3: (props) => <h3 className={`${style['subtitle']} ${style[`subtitle--${animal}`]}`} {...props}>{props.children}</h3>,
             Link: (props) => <Link className={`${style['subtitle']} ${style[`subtitle--${animal}`]}`} {...props}>{props.children}</Link>,
-            Image,
+            ShowImage,
             List,
             ListSimple,
             ListWithImages,

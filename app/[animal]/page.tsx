@@ -12,7 +12,7 @@ const AnimalPage = async ({params}: Record<string, any>) => {
 
     return (
         <main id='animal'>
-            <PageHeader title={`Everything about ${animal}s`} animal={animal} img='/bgimage.jpg'/>            
+            <PageHeader title={`Everything about ${animal}s`} animal={animal} img='bgimage_sql4lb'/>            
             <Breadcrumbs />
             <article className={style.article}>
                 <h2 className={style.sectionTitle}>well-being</h2>

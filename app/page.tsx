@@ -1,26 +1,33 @@
-import Image from "next/image"
 import Link from "next/link"
 
 import ShowArticles from "./components/ShowArticles"
 
-import bgimage from '../public/bgimage.jpg'
+import ShowImage from "./components/ShowImage"
 
 import style from './page.module.scss'
+import { getAllPosts, getPost, postArticle } from "./lib/dal"
 
-const HomePage = () => {
+const HomePage = async () => {
 
     // Sitename: petting, pet-thing
     // Next 15 calls are not cached!!!  
+
+    // await getAllPosts('cat')
+    // await getPost('')
+    // await postArticle()
+
+    // GOOGLE Analytics!!!
 
     return (
         <main id='home'>
             <article className={style.article} id='hero'>
                 <div className={style.imgwrapper}>
-                    <Image
-                        src={bgimage}
+                    <ShowImage
+                        src='bgimage_sql4lb'
                         alt='background'
-                        fill
-                        priority
+                        fill={true}
+                        // priority
+                        sizes='100vw'
                     />
                 </div>
                 <div className={style.details}>

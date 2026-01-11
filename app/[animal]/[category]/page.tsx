@@ -16,7 +16,7 @@ const CategoryPage = async ({params}: Record<string, any>) => {
 
     return (
         <main id='category'>
-            <PageHeader title={category} animal={animal} img='/bgimage.jpg' />
+            <PageHeader title={category} animal={animal} img='bgimage_sql4lb' />
             <Breadcrumbs />
             <article className={style.article}>
                 <h2 className={style.sectionTitle}>{category}</h2>

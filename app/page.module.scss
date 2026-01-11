@@ -11,8 +11,9 @@
 }
 .imgwrapper{
     position: relative;
-    width: 100%;
+    // width: 100%;
     aspect-ratio: 1.5/1;
+    width: 100vw;
 }
 .img{
     object-fit: cover;
